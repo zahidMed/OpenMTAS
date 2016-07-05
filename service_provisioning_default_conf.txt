@@ -1,0 +1,18 @@
+Provisioning:
+
+call forwarding unconditionnal
+enable: *67NP
+disable: *67#
+
+call forwarding busy
+enable: *68NP
+disable: *68#
+
+call forwarding no response
+enable: *69NP
+disable: *69#
+
+abbreviation
+enable: *51*AB*NP#
+disable per short number: *51*AB#
+disable fo all: *51#

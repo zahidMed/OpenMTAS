@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+ 
+	<app-name>OpenMTAS</app-name>
+	<display-name>MainServlet</display-name>
+	<description>MainServlet</description>
+	
+	<main-servlet>
+		MainServlet
+	</main-servlet>
+
+	<servlet>
+		<servlet-name>MainServlet</servlet-name>
+		<display-name>MainServlet</display-name>
+		<description>MainServlet</description>
+		<servlet-class>
+			com.openmtas.servlet.MainServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<listener>
+		<listener-class>
+			com.openmtas.servlet.MainServlet
+		</listener-class>
+	</listener>	
+	
+
+</sip-app>

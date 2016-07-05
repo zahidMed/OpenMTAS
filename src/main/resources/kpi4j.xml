@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<Collector name="node1"  schedulingPattern="* * * * *">		
+		 <ObjectType name="Services">
+			<Counters>
+				<Counter name="id" type="String" value="server1"/>
+				<Counter name="cfUnconditionalCount" type="Integer"/>
+				<Counter name="cfBusyCount" type="Integer"/>
+				<Counter name="cfNoAnswerCount" type="Integer"/>
+				<Counter name="cfUnreachableCount" type="Integer"/>
+				<Counter name="cAbbreviationCount" type="Integer"/>
+				<Counter name="cGroupShortNumberCount" type="Integer"/>
+				<Counter name="ctr4" type="Integer"/>
+			</Counters>
+		</ObjectType>
+		
+		 <ObjectType name="Provisioning">
+			<Counters>
+				<Counter name="id" type="String" value="server1"/>
+				<Counter name="cfUnconditionalEnablingCount" type="Integer"/>
+				<Counter name="cfUnconditionalDisableingCount" type="Integer"/>
+				<Counter name="cfBusyEnablingCount" type="Integer"/>
+				<Counter name="cfBusyDisablingCount" type="Integer"/>
+				<Counter name="cfNoAnswerEnablingCount" type="Integer"/>
+				<Counter name="cfNoAnswerDisablingCount" type="Integer"/>
+				<Counter name="cfUnreachableEnablingCount" type="Integer"/>
+				<Counter name="cfUnreachableDisablingCount" type="Integer"/>
+				
+				<Counter name="cAbbreviationCount" type="Integer"/>
+				<Counter name="cGroupShortNumberCount" type="Integer"/>
+				<Counter name="ctr4" type="Integer"/>
+			</Counters>
+		</ObjectType>
+		 
+		<!-- <Appender class="com.kpi4j.appender.SimpleXMLFileAppender" >
+			<param name="file" value="C:/D/kpi4j/IPworks"/>
+		</Appender> -->
+ 		<Appender class="com.kpi4j.appender.database.JDBCAppender" >
+			<param name="host" value="localhost"/>
+			<param name="port" value="3306"/>
+			<param name="login" value="root"/>
+			<param name="password" value="root"/>
+			<param name="driver" value="com.mysql.jdbc.Driver"/>
+			<param name="type" value="mysql"/>
+			<param name="database" value="kpi4j"/>
+			<param name="createTable" value="true"/>
+		</Appender>
+		
+<!-- 		<Appender class="com.kpi4j.appender._3gpp.XML3GppTs32Dot435V7Dot2Appender" >
+			<param name="vendorName" value="CompanyNN"/>
+			<param name="dnPrefix" value="DC=a1.companyNN.com,SubNetwork=1,IRPAgent=1"/>
+			<param name="localDn" value="SubNetwork=CountryNN,MeContext=MEC-Gbg-1,ManagedElement=RNC-Gbg-1"/>
+			<param name="elementType" value="RNC"/>
+			<param name="userLabel" value="RNC Telecomville"/>
+			<param name="swVersion" value="R30.1.5"/>
+			<param name="directory" value="C:/D/kpi4j/"/>
+		</Appender> -->
+	</Collector>
+</config>
